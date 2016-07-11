@@ -104,6 +104,42 @@ app.delete('/todos/:id',function (req,res) {
     }
 });
 
+/////// PUT requests // for updating data
+
+// PUT/todos/:id
+app.put('/todos/:id',function (req,res) {
+
+    var todoId=parseInt(req.params.id,10);
+    var matchedTodo=_.findWhere(todos,{id:todoId});
+
+    if(!matchedTodo){
+        return res.status(404).json({"Error":"No Todo Id Found"});
+    }
+
+    // Validating Data before updating
+    var body=_.pick(req.body,'description','completed');
+    var validateAttribute={};
+
+    if(body.hasOwnProperty('completed') && _.isBoolean(body.completed)){
+        validateAttribute.completed=body.completed;
+    }else if(body.hasOwnProperty('completed')){
+        return res.status(404).send();
+    }
+
+    if(body.hasOwnProperty('description') && _.isString('description') && body.description.trim().length>0){
+        validateAttribute.description=body.description;
+    }else if(body.hasOwnProperty('description')){
+        return res.status(400).send();
+    }
+
+    // Updating it Now
+    _.extend(matchedTodo,validateAttribute);    // Update
+    res.json(matchedTodo);
+
+
+});
+
+
 app.listen(PORT,function () {
    console.log('Express Listening on port :'+PORT+'!');
 });
