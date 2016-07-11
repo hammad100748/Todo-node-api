@@ -40,7 +40,21 @@ app.get('/',function (req,res) {
 
 // GET url will be /todos it will return each todos item on postman
 app.get('/todos',function (req,res) {
-    res.json(todos)
+    // res.json(todos)  // instead this we can also use queries for filtering data or getting
+                        // any data  format is ?completed=true so it will return all true todos
+
+    var queryParams=req.query;  // gets the query part from url
+    var filterTodos=todos;
+
+    if(queryParams.hasOwnProperty('completed') && queryParams.completed==='true'){
+        filterTodos=_.where(filterTodos,{completed:true});
+        
+    }else if(queryParams.hasOwnProperty('completed') && queryParams.completed==='false'){
+        filterTodos=_.where(filterTodos,{completed:false});
+    }
+
+    res.json(filterTodos);
+
 });
 
 // GET url will be /todo/:id
@@ -110,6 +124,10 @@ app.delete('/todos/:id',function (req,res) {
 app.put('/todos/:id',function (req,res) {
 
     var todoId=parseInt(req.params.id,10);
+    //debugger;   // it will stop the parogram at this point show all values excuted before
+                // in terminal if u want to continue u have to type 'cont' to continues program and type 'kill' to finish debugging
+                // See lecture 10 in Project TODO REST API
+
     var matchedTodo=_.findWhere(todos,{id:todoId});
 
     if(!matchedTodo){
