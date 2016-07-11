@@ -82,9 +82,7 @@ app.post('/todos',function (req,res) {
     // set body description to be trimed value
     // i-e unwanted spcaes will be removed not the orignal 1's but unwanted spaces
     body.description=body.description.trim();
-
-    body.id=todoNextId;
-    todoNextId++;
+    body.id=todoNextId++;
     todos.push(body);
     res.json(body);
 });
