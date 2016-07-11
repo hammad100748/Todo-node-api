@@ -4,6 +4,8 @@
 
 var express=require('express');
 var bodyParser=require('body-parser');
+var _=require('underscore');
+
 var app=express();
 var PORT=process.env.PORT||3000;
 var todos=[];
@@ -46,13 +48,16 @@ app.get('/todos',function (req,res) {
 app.get('/todos/:id',function (req,res) {
     //res.send('Asking fo ID is '+req.params.id);
     var todoId=parseInt(req.params.id,10);   // we have to change it to int cuz p'arams.id' returns string
-    var matchedTodo;
+    var matchedTodo=_.findWhere(todos,{id:todoId});
+
     // Iterating through todos array
+    /*  Now instead of our own iteration we will be using _js libraries to do search for us and ay kind of work
     todos.forEach(function (todo) {
        if(todoId===todo.id) {
             matchedTodo=todo;
        }
-    });
+    });*/
+
     if(matchedTodo){
         res.json(matchedTodo);
     }else{
@@ -65,7 +70,18 @@ app.get('/todos/:id',function (req,res) {
 
 // POST /todos
 app.post('/todos',function (req,res) {
-    var body=req.body;
+    // var body=req.body;   // using underscoreJs functionality
+    var body=_.pick(req.body,'description','completed');    // we can use this funct instead creating our own funct
+                                                            // also we get data which we want from json instead of getting all data
+
+    if(!_.isBoolean(body.completed)||!_.isString(body.description)||body.description.trim().length===0){
+        console.log('here at log');
+        return res.status(400).send();
+    }
+
+    // set body description to be trimed value
+    // i-e unwanted spcaes will be removed not the orignal 1's but unwanted spaces
+    body.description=body.description.trim();
 
     body.id=todoNextId;
     todoNextId++;
