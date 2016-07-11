@@ -87,6 +87,22 @@ app.post('/todos',function (req,res) {
     res.json(body);
 });
 
+////// DELETE Requests /////
+
+// Delete/todos/:id
+
+app.delete('/todos/:id',function (req,res) {
+    var todoId=parseInt(req.params.id,10);
+    var matchedTodo=_.findWhere(todos,{id:todoId});
+
+    if(!matchedTodo){
+        // res.status(404).send();  // Instead this we can also send error message
+        res.status(404).json({"Error":"No todo find with ID"});
+    }else{
+        todos=_.without(todos,matchedTodo);      //Using undersocreJs functionality without we deleted the matched todo
+        res.json(todos);            // Sends back updated todo
+    }
+});
 
 app.listen(PORT,function () {
    console.log('Express Listening on port :'+PORT+'!');
