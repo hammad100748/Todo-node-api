@@ -48,9 +48,16 @@ app.get('/todos',function (req,res) {
 
     if(queryParams.hasOwnProperty('completed') && queryParams.completed==='true'){
         filterTodos=_.where(filterTodos,{completed:true});
-        
+
     }else if(queryParams.hasOwnProperty('completed') && queryParams.completed==='false'){
         filterTodos=_.where(filterTodos,{completed:false});
+    }
+
+    // Adding another query for searching a word in description and return that description wh include word
+    if(queryParams.hasOwnProperty('q') && queryParams.q.length>0){  // checking it has query q and its length greater than 1 mean its not empty
+        filterTodos=_.filter(filterTodos,function (todo) {
+            return todo.description.toLowerCase().indexOf(queryParams.q)>-1;  // index of means that word is there and it would return a +iv num
+        });
     }
 
     res.json(filterTodos);
