@@ -66,26 +66,37 @@ app.get('/todos',function (req,res) {
 
 });
 
-// GET url will be /todo/:id
-// we search by id and return the matched to post man or anything u want to show into
+// GET url will be /todo/:id    // using DB
 app.get('/todos/:id',function (req,res) {
     //res.send('Asking fo ID is '+req.params.id);
     var todoId=parseInt(req.params.id,10);   // we have to change it to int cuz p'arams.id' returns string
-    var matchedTodo=_.findWhere(todos,{id:todoId});
 
-    // Iterating through todos array
-    /*  Now instead of our own iteration we will be using _js libraries to do search for us and ay kind of work
-    todos.forEach(function (todo) {
-       if(todoId===todo.id) {
-            matchedTodo=todo;
-       }
-    });*/
+    db.todo.findById(todoId).then(function (todo) {
+        if(!!todo){
+            res.json(todo.toJSON());
+        }else{
+            res.status(404).send();
+        }
+    },function (e) {
+       res.status(500).send();
+    });
+    /*Now instead of following we will use DB findByID which is Select Query by using API call
+
+    var matchedTodo=_.findWhere(todos,{id:todoId});
 
     if(matchedTodo){
         res.json(matchedTodo);
     }else{
         res.status(404).send(); // if not then send 404 error
-    }
+    }*/
+
+    // Iterating through todos array
+    /*  Now instead of our own iteration we will be using _js libraries to do search for us and ay kind of work
+     todos.forEach(function (todo) {
+     if(todoId===todo.id) {
+     matchedTodo=todo;
+     }
+     });*/
 
 });
 
@@ -97,9 +108,7 @@ app.post('/todos',function (req,res) {
     var body=_.pick(req.body,'description','completed');    // we can use this funct instead creating our own funct
                                                             // also we get data which we want from json instead of getting all data
 
-
-    // Using API's to Access DB to add new data //
-
+    // Using API's to Access DB to add new data using creaate wh is Insert Query //
     db.todo.create(body).then(function (todo) {
         res.json(todo.toJSON());
     },function (e) {
