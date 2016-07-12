@@ -45,8 +45,31 @@ app.get('/todos',function (req,res) {
     // res.json(todos)  // instead this we can also use queries for filtering data or getting
                         // any data  format is ?completed=true so it will return all true todos
 
-    var queryParams=req.query;  // gets the query part from url
-    var filterTodos=todos;
+    var queryParams=req.query;  // gets the query part from url after '?'   ?completed=false&q=word
+
+    var whereQuery={};
+    // Handling Parameters ?completed=true|false or ?q=anyword or both
+    if(queryParams.hasOwnProperty('completed')&&queryParams.completed==='true'){
+        whereQuery.completed=true;
+    }else if(queryParams.hasOwnProperty('completed') && queryParams.completed==='false'){
+        whereQuery.completed=false;
+    }
+
+    if(queryParams.hasOwnProperty('q') && queryParams.q.length>0){
+        whereQuery.description={
+            $like:'%'+queryParams.q + '%'   // checking if word matches in any description it returns that
+        };
+    }
+
+    // Now Passing Where query
+    db.todo.findAll({where:whereQuery}).then(function (todo) {
+        res.json(todo);
+    },function (e) {
+        res.status(500).send();
+    });
+
+    /*Now Instead of this we will use db quires to full fill all this functionality
+   var filterTodos=todos;
 
     if(queryParams.hasOwnProperty('completed') && queryParams.completed==='true'){
         filterTodos=_.where(filterTodos,{completed:true});
@@ -63,7 +86,7 @@ app.get('/todos',function (req,res) {
     }
 
     res.json(filterTodos);
-
+*/
 });
 
 // GET url will be /todo/:id    // using DB

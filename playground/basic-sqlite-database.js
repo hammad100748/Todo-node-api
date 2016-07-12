@@ -41,8 +41,8 @@ sequelize.sync().then(function () {
             return Todo.findAll({       // best if by searching criteria like in our case if completed is false return all
                 where:{
                     // completed:true      // Select query with where option this is how we do it here
-                    description:{
-                        $like:'%trash%'    // Will return all those wh contains this word
+                    completed:{
+                        $like:'%trash%'    // Will return all those wh contins
                     }
                 }
             });
