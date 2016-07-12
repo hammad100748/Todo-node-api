@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9733d9f7-f254-4e06-a6bb-dfdbe69482d6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.js" afterPath="$PROJECT_DIR$/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="TODO Project NodeJs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,12 +24,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2150">
-              <caret line="104" column="7" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
+            <state relative-caret-position="340">
+              <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
+                <element signature="e#378#727#0" expanded="false" />
                 <element signature="e#1984#2909#0" expanded="false" />
                 <element signature="e#3393#3670#0" expanded="false" />
                 <element signature="e#3713#3926#0" expanded="false" />
@@ -53,19 +53,16 @@
       <file leaf-file-name="basic-sqlite-database.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+            <state relative-caret-position="896">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
                 <element signature="e#136#265#0" expanded="false" />
                 <element signature="e#1059#1187#0" expanded="false" />
                 <element signature="e#1210#1299#0" expanded="false" />
                 <element signature="e#1239#1291#0" expanded="false" />
-                <element signature="e#1881#2125#0" expanded="false" />
                 <element signature="e#1900#2059#0" expanded="false" />
                 <element signature="e#1988#2047#0" expanded="false" />
-                <element signature="e#2063#2119#0" expanded="false" />
-                <element signature="e#2146#2177#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="325">
@@ -133,10 +130,10 @@
         <option value="$PROJECT_DIR$/npm-debug.log" />
         <option value="$PROJECT_DIR$/models/todo.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/playground/basic-sqlite-database.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/db.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -314,16 +311,16 @@
       <workItem from="1468176913746" duration="6352000" />
       <workItem from="1468245023395" duration="1845000" />
       <workItem from="1468263183133" duration="10509000" />
-      <workItem from="1468281133240" duration="10964000" />
+      <workItem from="1468281133240" duration="12210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32403000" />
+    <option name="totallyTimeSpent" value="33649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24655356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -332,7 +329,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2412993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2412993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -366,6 +363,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#378#727#0" expanded="false" />
             <element signature="e#1984#2909#0" expanded="false" />
             <element signature="e#3393#3670#0" expanded="false" />
             <element signature="e#3713#3926#0" expanded="false" />
@@ -387,6 +385,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#378#727#0" expanded="false" />
             <element signature="e#1984#2909#0" expanded="false" />
             <element signature="e#3393#3670#0" expanded="false" />
             <element signature="e#3713#3926#0" expanded="false" />
@@ -415,6 +414,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#378#727#0" expanded="false" />
             <element signature="e#1984#2909#0" expanded="false" />
             <element signature="e#3393#3670#0" expanded="false" />
             <element signature="e#3713#3926#0" expanded="false" />
@@ -440,43 +440,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#40#0" expanded="false" />
-            <element signature="e#136#265#0" expanded="false" />
-            <element signature="e#1059#1187#0" expanded="false" />
-            <element signature="e#1210#1299#0" expanded="false" />
-            <element signature="e#1239#1291#0" expanded="false" />
-            <element signature="e#1881#2125#0" expanded="false" />
-            <element signature="e#1900#2059#0" expanded="false" />
-            <element signature="e#1988#2047#0" expanded="false" />
-            <element signature="e#2063#2119#0" expanded="false" />
-            <element signature="e#2146#2177#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2150">
-          <caret line="104" column="7" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
-          <folding>
-            <element signature="e#1984#2909#0" expanded="false" />
-            <element signature="e#3393#3670#0" expanded="false" />
-            <element signature="e#3713#3926#0" expanded="false" />
-            <element signature="e#4584#5042#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,6 +464,36 @@
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#136#265#0" expanded="false" />
+            <element signature="e#1059#1187#0" expanded="false" />
+            <element signature="e#1210#1299#0" expanded="false" />
+            <element signature="e#1239#1291#0" expanded="false" />
+            <element signature="e#1900#2059#0" expanded="false" />
+            <element signature="e#1988#2047#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding>
+            <element signature="e#378#727#0" expanded="false" />
+            <element signature="e#1984#2909#0" expanded="false" />
+            <element signature="e#3393#3670#0" expanded="false" />
+            <element signature="e#3713#3926#0" expanded="false" />
+            <element signature="e#4584#5042#0" expanded="false" />
           </folding>
         </state>
       </provider>

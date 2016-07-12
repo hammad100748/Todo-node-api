@@ -157,6 +157,22 @@ app.post('/todos',function (req,res) {
 
 app.delete('/todos/:id',function (req,res) {
     var todoId=parseInt(req.params.id,10);
+    console.log(todoId);
+    // We use destroy for Delete Query
+    db.todo.destroy({   // Delete a row using id
+        where:{
+            id:todoId
+        }
+    }).then(function(rowsDeleted) {
+        if(rowsDeleted===0){
+            res.status(404).json({error:'No todo found'});
+        }else{
+            res.status(202).send();
+        }
+    },function () {
+            res.status(505).send();
+    });
+    /* Now usng DB instead of manually
     var matchedTodo=_.findWhere(todos,{id:todoId});
 
     if(!matchedTodo){
@@ -165,7 +181,7 @@ app.delete('/todos/:id',function (req,res) {
     }else{
         todos=_.without(todos,matchedTodo);      //Using undersocreJs functionality without we deleted the matched todo
         res.json(todos);            // Sends back updated todo
-    }
+    }*/
 });
 
 /////// PUT requests // for updating data
