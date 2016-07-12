@@ -190,6 +190,35 @@ app.delete('/todos/:id',function (req,res) {
 app.put('/todos/:id',function (req,res) {
 
     var todoId=parseInt(req.params.id,10);
+    var body=_.pick(req.body,'description','completed');    // Here we are getting updated body
+    var attributes={};
+
+    // DB is using validation of string and null and boolean as we specified in our table for rows
+    if(body.hasOwnProperty('completed')){
+        attributes.completed=body.completed;
+    }
+    if(body.hasOwnProperty('description')){
+        attributes.description=body.description;
+    }
+
+    // We update but 1st we find id using findbyid
+    db.todo.findById(todoId).then(function (todo) {     // Finding Id wh to be updated
+       if(todo){
+           todo.update(attributes).then(function (todo) {
+               res.json(todo.toJSON());                        // If todo.updated runs we send back 200
+           },function (e) {
+               res.status(400).json(e);                        // if todo.updated failed
+           });               // Updating Row by using id
+       }else{
+           res.status(404).send();                      // If Id not found
+       }
+    },function () {
+        res.status(500).send();                         //if find by id went wrong
+
+    });
+/*
+    using PUT for update
+var todoId=parseInt(req.params.id,10);
     //debugger;   // it will stop the parogram at this point show all values excuted before
                 // in terminal if u want to continue u have to type 'cont' to continues program and type 'kill' to finish debugging
                 // See lecture 10 in Project TODO REST API
@@ -218,7 +247,7 @@ app.put('/todos/:id',function (req,res) {
 
     // Updating it Now
     _.extend(matchedTodo,validateAttribute);    // Update
-    res.json(matchedTodo);
+    res.json(matchedTodo);*/
 
 
 });
