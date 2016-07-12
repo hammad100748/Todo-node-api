@@ -5,6 +5,8 @@
 var express=require('express');
 var bodyParser=require('body-parser');
 var _=require('underscore');
+var db=require('./db.js');
+
 
 var app=express();
 var PORT=process.env.PORT||3000;
@@ -89,14 +91,23 @@ app.get('/todos/:id',function (req,res) {
 
 /////// POST Requests   ///
 
-// POST /todos
+// POST /todos  // using db and api's
 app.post('/todos',function (req,res) {
     // var body=req.body;   // using underscoreJs functionality
     var body=_.pick(req.body,'description','completed');    // we can use this funct instead creating our own funct
                                                             // also we get data which we want from json instead of getting all data
 
+
+    // Using API's to Access DB to add new data //
+
+    db.todo.create(body).then(function (todo) {
+        res.json(todo.toJSON());
+    },function (e) {
+        res.status(400).json(e);
+    });
+
+    /* Using Database above instead of following almost same same
     if(!_.isBoolean(body.completed)||!_.isString(body.description)||body.description.trim().length===0){
-        console.log('here at log');
         return res.status(400).send();
     }
 
@@ -105,7 +116,7 @@ app.post('/todos',function (req,res) {
     body.description=body.description.trim();
     body.id=todoNextId++;
     todos.push(body);
-    res.json(body);
+    res.json(body);*/
 });
 
 ////// DELETE Requests /////
@@ -165,6 +176,9 @@ app.put('/todos/:id',function (req,res) {
 });
 
 
-app.listen(PORT,function () {
-   console.log('Express Listening on port :'+PORT+'!');
+db.sequelize.sync().then(function () {
+    app.listen(PORT,function () {
+        console.log('Express Listening on port :'+PORT+'!');
+    });
 });
+

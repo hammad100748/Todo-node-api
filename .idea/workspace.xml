@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9733d9f7-f254-4e06-a6bb-dfdbe69482d6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playground/basic-sqlite-database.sqlite" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playground/basic-sqlite-database.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/todo-api-database.sqlite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/todo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="TODO Project NodeJs.iws" />
@@ -30,18 +32,91 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+                <element signature="e#378#727#0" expanded="false" />
+                <element signature="e#795#830#0" expanded="false" />
+                <element signature="e#938#2041#0" expanded="false" />
+                <element signature="e#944#1033#0" expanded="false" />
+                <element signature="e#1304#1371#0" expanded="false" />
+                <element signature="e#1454#1521#0" expanded="false" />
+                <element signature="e#1696#2010#0" expanded="false" />
+                <element signature="e#1832#2002#0" expanded="false" />
+                <element signature="e#2045#2073#0" expanded="false" />
+                <element signature="e#2200#2810#0" expanded="false" />
+                <element signature="e#2453#2675#0" expanded="false" />
+                <element signature="e#2696#2734#0" expanded="false" />
+                <element signature="e#2738#2807#0" expanded="false" />
+                <element signature="e#3044#3099#0" expanded="false" />
+                <element signature="e#3434#3892#0" expanded="false" />
+                <element signature="e#3992#4460#0" expanded="false" />
+                <element signature="e#4110#4264#0" expanded="false" />
+                <element signature="e#4268#4458#0" expanded="false" />
+                <element signature="e#4564#5761#0" expanded="false" />
+                <element signature="e#4614#4701#0" expanded="false" />
+                <element signature="e#4967#5041#0" expanded="false" />
+                <element signature="e#5241#5300#0" expanded="false" />
+                <element signature="e#5341#5387#0" expanded="false" />
+                <element signature="e#5496#5559#0" expanded="false" />
+                <element signature="e#5602#5648#0" expanded="false" />
+                <element signature="e#5803#5909#0" expanded="false" />
+                <element signature="e#5837#5905#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="basic-sqlite-database.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="basic-sqlite-database.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="-450">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".keep" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/.keep">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="11" column="112" selection-start-line="11" selection-start-column="112" selection-end-line="11" selection-end-column="112" />
+              <folding>
+                <element signature="e#0#40#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/todo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -74,11 +149,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/npm-debug.log" />
         <option value="$PROJECT_DIR$/playground/basic-sqlite-database.js" />
+        <option value="$PROJECT_DIR$/models/todo.js" />
+        <option value="$PROJECT_DIR$/db.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -148,7 +225,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="playground" />
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TODO Project NodeJs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TODO Project NodeJs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -242,12 +333,12 @@
       <workItem from="1468176913746" duration="6352000" />
       <workItem from="1468245023395" duration="1845000" />
       <workItem from="1468263183133" duration="10509000" />
-      <workItem from="1468281133240" duration="3513000" />
+      <workItem from="1468281133240" duration="7401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24952000" />
+    <option name="totallyTimeSpent" value="28840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
@@ -291,7 +382,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#378#727#0" expanded="false" />
+            <element signature="e#795#830#0" expanded="false" />
+            <element signature="e#938#2041#0" expanded="false" />
+            <element signature="e#944#1033#0" expanded="false" />
+            <element signature="e#1304#1371#0" expanded="false" />
+            <element signature="e#1454#1521#0" expanded="false" />
+            <element signature="e#1696#2010#0" expanded="false" />
+            <element signature="e#1832#2002#0" expanded="false" />
+            <element signature="e#2045#2073#0" expanded="false" />
+            <element signature="e#2200#2810#0" expanded="false" />
+            <element signature="e#2453#2675#0" expanded="false" />
+            <element signature="e#2696#2734#0" expanded="false" />
+            <element signature="e#2738#2807#0" expanded="false" />
+            <element signature="e#3044#3099#0" expanded="false" />
+            <element signature="e#3434#3892#0" expanded="false" />
+            <element signature="e#3992#4460#0" expanded="false" />
+            <element signature="e#4110#4264#0" expanded="false" />
+            <element signature="e#4268#4458#0" expanded="false" />
+            <element signature="e#4564#5761#0" expanded="false" />
+            <element signature="e#4614#4701#0" expanded="false" />
+            <element signature="e#4967#5041#0" expanded="false" />
+            <element signature="e#5241#5300#0" expanded="false" />
+            <element signature="e#5341#5387#0" expanded="false" />
+            <element signature="e#5496#5559#0" expanded="false" />
+            <element signature="e#5602#5648#0" expanded="false" />
+            <element signature="e#5803#5909#0" expanded="false" />
+            <element signature="e#5837#5905#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -307,7 +427,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#378#727#0" expanded="false" />
+            <element signature="e#795#830#0" expanded="false" />
+            <element signature="e#938#2041#0" expanded="false" />
+            <element signature="e#944#1033#0" expanded="false" />
+            <element signature="e#1304#1371#0" expanded="false" />
+            <element signature="e#1454#1521#0" expanded="false" />
+            <element signature="e#1696#2010#0" expanded="false" />
+            <element signature="e#1832#2002#0" expanded="false" />
+            <element signature="e#2045#2073#0" expanded="false" />
+            <element signature="e#2200#2810#0" expanded="false" />
+            <element signature="e#2453#2675#0" expanded="false" />
+            <element signature="e#2696#2734#0" expanded="false" />
+            <element signature="e#2738#2807#0" expanded="false" />
+            <element signature="e#3044#3099#0" expanded="false" />
+            <element signature="e#3434#3892#0" expanded="false" />
+            <element signature="e#3992#4460#0" expanded="false" />
+            <element signature="e#4110#4264#0" expanded="false" />
+            <element signature="e#4268#4458#0" expanded="false" />
+            <element signature="e#4564#5761#0" expanded="false" />
+            <element signature="e#4614#4701#0" expanded="false" />
+            <element signature="e#4967#5041#0" expanded="false" />
+            <element signature="e#5241#5300#0" expanded="false" />
+            <element signature="e#5341#5387#0" expanded="false" />
+            <element signature="e#5496#5559#0" expanded="false" />
+            <element signature="e#5602#5648#0" expanded="false" />
+            <element signature="e#5803#5909#0" expanded="false" />
+            <element signature="e#5837#5905#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -330,14 +479,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#378#727#0" expanded="false" />
+            <element signature="e#795#830#0" expanded="false" />
+            <element signature="e#938#2041#0" expanded="false" />
+            <element signature="e#944#1033#0" expanded="false" />
+            <element signature="e#1304#1371#0" expanded="false" />
+            <element signature="e#1454#1521#0" expanded="false" />
+            <element signature="e#1696#2010#0" expanded="false" />
+            <element signature="e#1832#2002#0" expanded="false" />
+            <element signature="e#2045#2073#0" expanded="false" />
+            <element signature="e#2200#2810#0" expanded="false" />
+            <element signature="e#2453#2675#0" expanded="false" />
+            <element signature="e#2696#2734#0" expanded="false" />
+            <element signature="e#2738#2807#0" expanded="false" />
+            <element signature="e#3044#3099#0" expanded="false" />
+            <element signature="e#3434#3892#0" expanded="false" />
+            <element signature="e#3992#4460#0" expanded="false" />
+            <element signature="e#4110#4264#0" expanded="false" />
+            <element signature="e#4268#4458#0" expanded="false" />
+            <element signature="e#4564#5761#0" expanded="false" />
+            <element signature="e#4614#4701#0" expanded="false" />
+            <element signature="e#4967#5041#0" expanded="false" />
+            <element signature="e#5241#5300#0" expanded="false" />
+            <element signature="e#5341#5387#0" expanded="false" />
+            <element signature="e#5496#5559#0" expanded="false" />
+            <element signature="e#5602#5648#0" expanded="false" />
+            <element signature="e#5803#5909#0" expanded="false" />
+            <element signature="e#5837#5905#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -350,21 +521,86 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/npm-debug.log" />
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/data/.keep">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="11" column="112" selection-start-line="11" selection-start-column="112" selection-end-line="11" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playground/basic-sqlite-database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="-450">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="false" />
+            <element signature="e#378#727#0" expanded="false" />
+            <element signature="e#795#830#0" expanded="false" />
+            <element signature="e#938#2041#0" expanded="false" />
+            <element signature="e#944#1033#0" expanded="false" />
+            <element signature="e#1304#1371#0" expanded="false" />
+            <element signature="e#1454#1521#0" expanded="false" />
+            <element signature="e#1696#2010#0" expanded="false" />
+            <element signature="e#1832#2002#0" expanded="false" />
+            <element signature="e#2045#2073#0" expanded="false" />
+            <element signature="e#2200#2810#0" expanded="false" />
+            <element signature="e#2453#2675#0" expanded="false" />
+            <element signature="e#2696#2734#0" expanded="false" />
+            <element signature="e#2738#2807#0" expanded="false" />
+            <element signature="e#3044#3099#0" expanded="false" />
+            <element signature="e#3434#3892#0" expanded="false" />
+            <element signature="e#3992#4460#0" expanded="false" />
+            <element signature="e#4110#4264#0" expanded="false" />
+            <element signature="e#4268#4458#0" expanded="false" />
+            <element signature="e#4564#5761#0" expanded="false" />
+            <element signature="e#4614#4701#0" expanded="false" />
+            <element signature="e#4967#5041#0" expanded="false" />
+            <element signature="e#5241#5300#0" expanded="false" />
+            <element signature="e#5341#5387#0" expanded="false" />
+            <element signature="e#5496#5559#0" expanded="false" />
+            <element signature="e#5602#5648#0" expanded="false" />
+            <element signature="e#5803#5909#0" expanded="false" />
+            <element signature="e#5837#5905#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
